@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react"
 import { User, createUser } from "./api/users"
+import { Route, Routes } from "react-router-dom"
+import { StartPage } from "./pages/StartPage"
+import { OnboardingPage } from "./pages/OnboardingPage"
+import { TrainingPage } from "./pages/TrainingPage"
 
 const App = () => {
 
@@ -7,7 +11,6 @@ const App = () => {
 
   useEffect(()=>{
     if(!id) {
-      console.log(id);
       createUser({direction:"direct"})
         .then((res:{data:User}) => {
           const userId = res?.data?.id
@@ -19,12 +22,13 @@ const App = () => {
     }
   }, [id])
 
-  console.log('id', id);
-  
   return (
-    <>
-      Yogather
-    </>
+    <Routes>
+      <Route path="/" element={<StartPage />} />
+      <Route path="/onboarding" element={<OnboardingPage />} />
+      <Route path="/training" element={<TrainingPage />} />
+      <Route path='*' element={<StartPage />} />
+    </Routes>
   )
 }
 
