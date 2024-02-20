@@ -1,5 +1,24 @@
 import { Link } from "react-router-dom"
-import { AppleStoreBtnUI, ContactsUI, FeaturesUI, GooglePlayBtnUI, HeroUI, MainMotto, MainTitleUI, StoreBtnContainerUI } from "./StartPage.styled"
+import { AppleStoreBtnUI, ContactsUI, FeaturesUI, GooglePlayBtnUI, HeroUI, MainMotto, MainTitleUI, SingleFeatureUI, StoreBtnContainerUI } from "./StartPage.styled"
+
+const features = [
+    {
+        text: "effective yoga workout",
+        img: "../../public/feauture.jpg"
+    },
+    {
+        text: "all yoga benefits in one app",
+        img: "../../public/feauture.jpg"
+    },
+    {
+        text: "track you progress and share results",
+        img: "../../public/feauture.jpg"
+    },
+    {
+        text: "personal programs",
+        img: "../../public/feauture.jpg"
+    }
+]
 
 export const StartPage = () => {
     return (<>
@@ -10,7 +29,10 @@ export const StartPage = () => {
             <button><Link to="/onboarding">start</Link></button>
         </HeroUI>
         <FeaturesUI>
-            Features
+            {features.map(el => <SingleFeatureUI key={el.text}>
+                {el.text}
+                <img src={el.img} alt={el.text} width="210px"/>
+            </SingleFeatureUI>)}
         </FeaturesUI>
         <ContactsUI>
             <MainMotto>Practice yoga together with yogather</MainMotto>

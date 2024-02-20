@@ -18,6 +18,8 @@ export const FeaturesUI = styled.div`
     min-height: 500px;
     background-color: black;
     color: white;
+    gap: 20px;
+    padding: 10px 0;
 `
 export const ContactsUI = styled.div`
     margin: auto;
@@ -25,7 +27,7 @@ export const ContactsUI = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 500px;
+    min-height: 550px;
     flex-direction: column;
 `
 export const MainTitleUI = styled.h1`
@@ -33,6 +35,14 @@ export const MainTitleUI = styled.h1`
 `
 export const MainMotto = styled.h2`
     font-size: 50px;
+`
+
+export const SingleFeatureUI = styled.div`
+    width: 210px;
+    height: 510px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 `
 
 export const StoreBtnContainerUI = styled.div`
