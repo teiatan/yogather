@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom"
 import { AppleStoreBtnUI, ContactsUI, FeaturesUI, GooglePlayBtnUI, HeroUI, MainMotto, MainTitleUI, SingleFeatureUI, StoreBtnContainerUI } from "./StartPage.styled"
 import featureImg from "../images/feauture.jpg";
+import { Button } from "antd";
+import { getUserAnswers, updateUserAnswers } from "../utils";
 const features = [
     {
         text: "effective yoga workout",
@@ -21,12 +23,24 @@ const features = [
 ]
 
 export const StartPage = () => {
+    const increaseClicks = (place:string) => {
+        const prevAnswers = getUserAnswers()
+        const prevAmount = (prevAnswers && prevAnswers?.clicks && prevAnswers?.clicks[place]) ? prevAnswers?.clicks[place] : 0
+        const newAnswers = {
+            ...prevAnswers,
+            clicks: {
+                ...prevAnswers?.clicks,
+                [place]: prevAmount + 1
+            }
+        }
+        updateUserAnswers(newAnswers)   
+    }
     return (<>
         <HeroUI>
             <MainTitleUI>Yogather</MainTitleUI>
             <MainMotto>gather for yoga</MainMotto> 
             wherever you are, whenever you want
-            <button><Link to="/onboarding">start</Link></button>
+            <Button type="primary"><Link to="/onboarding">start</Link></Button>
         </HeroUI>
         <FeaturesUI>
             {features.map(el => <SingleFeatureUI key={el.text}>
@@ -38,8 +52,8 @@ export const StartPage = () => {
             <MainMotto>Practice yoga together with yogather</MainMotto>
             join now
             <StoreBtnContainerUI>
-                <AppleStoreBtnUI />
-                <GooglePlayBtnUI />
+                <AppleStoreBtnUI onClick={()=>increaseClicks("appleStore")}/>
+                <GooglePlayBtnUI onClick={()=>increaseClicks("googlePlay")}/>
             </StoreBtnContainerUI>
             
         </ContactsUI>
