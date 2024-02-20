@@ -1,22 +1,22 @@
 import { Link } from "react-router-dom"
 import { AppleStoreBtnUI, ContactsUI, FeaturesUI, GooglePlayBtnUI, HeroUI, MainMotto, MainTitleUI, SingleFeatureUI, StoreBtnContainerUI } from "./StartPage.styled"
-
+import featureImg from "../images/feauture.jpg";
 const features = [
     {
         text: "effective yoga workout",
-        img: "src/images/feauture.jpg"
+        img: featureImg
     },
     {
         text: "all yoga benefits in one app",
-        img: "src/images/feauture.jpg"
+        img: featureImg
     },
     {
         text: "track you progress and share results",
-        img: "src/images/feauture.jpg"
+        img: featureImg
     },
     {
         text: "personal programs",
-        img: "src/images/feauture.jpg"
+        img: featureImg
     }
 ]
 

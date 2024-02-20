@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import AppleStoreImg from '../images/App Store.svg';
+import GooglePlayImg from '../images/Google Play.svg';
 
 export const HeroUI = styled.div`
     margin: auto;
@@ -57,13 +59,13 @@ export const AppleStoreBtnUI = styled.button`
     border: none;
     width: 540px;
     height: 156px;
-    background: url('src/images/App Store.svg') no-repeat center center;
+    background: url('${AppleStoreImg}') no-repeat center center;
     background-size: cover;
 `
 export const GooglePlayBtnUI = styled.button`
     border: none;
     width: 540px;
     height: 156px;
-    background: url('src/images/Google Play.svg') no-repeat center center;
+    background: url('${GooglePlayImg}') no-repeat center center;
     background-size: cover;
 `
