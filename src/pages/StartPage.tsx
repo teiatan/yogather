@@ -4,19 +4,19 @@ import { AppleStoreBtnUI, ContactsUI, FeaturesUI, GooglePlayBtnUI, HeroUI, MainM
 const features = [
     {
         text: "effective yoga workout",
-        img: "../../public/feauture.jpg"
+        img: "src/images/feauture.jpg"
     },
     {
         text: "all yoga benefits in one app",
-        img: "../../public/feauture.jpg"
+        img: "src/images/feauture.jpg"
     },
     {
         text: "track you progress and share results",
-        img: "../../public/feauture.jpg"
+        img: "src/images/feauture.jpg"
     },
     {
         text: "personal programs",
-        img: "../../public/feauture.jpg"
+        img: "src/images/feauture.jpg"
     }
 ]
 

@@ -57,13 +57,13 @@ export const AppleStoreBtnUI = styled.button`
     border: none;
     width: 540px;
     height: 156px;
-    background: url('../../public/App Store.svg') no-repeat center center;
+    background: url('src/images/App Store.svg') no-repeat center center;
     background-size: cover;
 `
 export const GooglePlayBtnUI = styled.button`
     border: none;
     width: 540px;
     height: 156px;
-    background: url('../../public/Google Play.svg') no-repeat center center;
+    background: url('src/images/Google Play.svg') no-repeat center center;
     background-size: cover;
 `
