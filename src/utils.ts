@@ -1,3 +1,5 @@
+import { updateUserData } from "./api/users";
+
 export interface Answers {
     clicks?: {
         gogglePlay?: number;
@@ -15,4 +17,6 @@ export const getUserAnswers = () => {
 export const updateUserAnswers = (data: Answers) => {
     const newData = JSON.stringify(data)
     localStorage.setItem('answers', newData)
+    const id = localStorage.getItem("id");
+    if(id) updateUserData(id, {answers: data})
 }
