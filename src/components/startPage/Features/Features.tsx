@@ -15,21 +15,21 @@ export const Features = () => {
 
             <FeaturesTop>
                 <FeatureCOntainerUI>
-                    <img src={FeatureImg1} width="100%"/>
+                    <img src={FeatureImg1} width="285px"/>
                     <FeatureTextContainer>
                         <HeadingUI><AccentHeadingUI>Workout</AccentHeadingUI> reminders and <AccentHeadingUI>notifications</AccentHeadingUI></HeadingUI>
                         Set up notifications so you exercise regularly. Personalize reminders for upcoming sessions, events, or tasks for your convenience.
                     </FeatureTextContainer>
                 </FeatureCOntainerUI>
                 <FeatureCOntainerUI>
-                    <img src={FeatureImg2} width="100%"/>
+                    <img src={FeatureImg2} width="285px"/>
                     <FeatureTextContainer>
                         <HeadingUI>Animated pose<br/> library suitable,<br /> for everybody</HeadingUI>
                         A comprehensive library of yoga poses with detailed instructions. Explore different poses, learn proper alignment, and practice safely.
                     </FeatureTextContainer>
                 </FeatureCOntainerUI>
                 <FeatureCOntainerUI>
-                    <img src={FeatureImg3} width="100%"/>
+                    <img src={FeatureImg3} width="285px"/>
                     <FeatureTextContainer>
                         <HeadingUI><AccentHeadingUI>Track</AccentHeadingUI> you progress and <AccentHeadingUI>share</AccentHeadingUI> results</HeadingUI>
                         Track your yoga practice, set goals and connect to other users. Share experiences or offer support to one another! 
@@ -42,9 +42,9 @@ export const Features = () => {
             <div style={{margin:"40px 0 84px 0"}}>Whether you're seeking to build strength, enhance flexibility, or find inner peace, our expert instructors are here to support you every step of the way. Elevate your practice with Yogather.</div>
 
             <FeaturesBottom>
-                <img src={FeatureImg4} width="100%"/>
-                <img src={FeatureImg5} width="100%"/>
-                <img src={FeatureImg6} width="100%"/>
+                <img src={FeatureImg4} width="285px"/>
+                <img src={FeatureImg5} width="285px"/>
+                <img src={FeatureImg6} width="285px"/>
             </FeaturesBottom>
 
         </FeatureContainer>

@@ -59,6 +59,13 @@ export const FeatureCOntainerUI = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 64px;
+
+    @media screen and (min-width: 1200px) {
+        &:nth-child(2) {
+            position: relative;
+            top: 287px;
+        }
+    }
 `
 
 export const FeatureTextContainer = styled.div`
@@ -75,10 +82,22 @@ export const FeaturesTop = styled.div`
     flex-direction: column;
     gap: 70px;
     margin-bottom: 117px;
+
+    @media screen and (min-width: 1200px) {
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+        margin-bottom: 359px;
+    }
 `
 
 export const FeaturesBottom = styled.div`
     display: flex;
     flex-direction: column;
     gap: 20px;
+    @media screen and (min-width: 1200px) {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 70px;
+    }
 `
