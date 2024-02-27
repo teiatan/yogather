@@ -77,3 +77,9 @@ export const SmallImagesBlockUI = styled.div`
         bottom: 0;
     }
 `
+
+export const OnlyDesktopUI = styled.span`
+    @media screen and (max-width: 553px) {
+        display: none;
+    }
+`
