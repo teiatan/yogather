@@ -73,6 +73,7 @@ export const ButtonUI = styled.button`
     width: 160px;
     height: 48px;
     background-color: inherit;
+    cursor: pointer;
 `;
 
 export const LinksUI = styled.div`

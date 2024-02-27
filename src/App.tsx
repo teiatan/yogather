@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom"
 import { StartPage } from "./pages/StartPage"
 import { OnboardingPage } from "./pages/OnboardingPage"
 import { TrainingPage } from "./pages/TrainingPage"
+import { SubscriptionPage } from "./pages/SubscriptionPage"
 
 const App = () => {
 
@@ -27,6 +28,7 @@ const App = () => {
       <Route path="/" element={<StartPage />} />
       <Route path="/onboarding" element={<OnboardingPage />} />
       <Route path="/training" element={<TrainingPage />} />
+      <Route path="/pay" element={<SubscriptionPage />} />
       <Route path='*' element={<StartPage />} />
     </Routes>
   )

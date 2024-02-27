@@ -10,7 +10,7 @@ export const Header = () => {
                     <Link to="">Features</Link>
                     <Link to="">Contacts</Link>
                 </LinksUI>
-                <ButtonUI>Get Yogather</ButtonUI>
+                <Link to="/pay"><ButtonUI>Get Yogather</ButtonUI></Link>
             </HeaderUI>
         </OutsideContainerUI>
     )
