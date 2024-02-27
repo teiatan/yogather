@@ -15,7 +15,7 @@ export const AccentText = styled.span`
 
 export const HeroContainerUi = styled.section`
 
-    margin-top: 29px;
+    margin-top: 94px;
     display: flex;
     flex-direction: column;
     gap: 80px;
@@ -25,7 +25,7 @@ export const HeroContainerUi = styled.section`
 
     @media screen and (min-width: 1200px) {
         gap: 20px;
-        margin-top: 64px;
+        margin-top: 129px;
         flex-direction: row;
         justify-content: space-between;
     }
