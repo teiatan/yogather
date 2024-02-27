@@ -4,12 +4,14 @@ import { white } from "../../utils/colors";
 
 export const SectionContainer = ({
     children,
-    backgroundColor = white
+    bgColor = white,
+    styles
 }:{
     children?: string | ReactNode;
-    backgroundColor?: string;
+    bgColor?: string;
+    styles?: React.CSSProperties;
 }) => {
-    return (<OutsideContainerUI bgColor={backgroundColor}>
+    return (<OutsideContainerUI bgColor={bgColor} style={styles}>
         <InsideContainerUI>
             {children}
         </InsideContainerUI>

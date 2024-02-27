@@ -3,6 +3,7 @@
 // import featureImg from "../images/feauture.jpg";
 // import { Button } from "antd";
 // import { getUserAnswers, updateUserAnswers } from "../utils";
+import { Features } from "../components/startPage/Features/Features";
 import { Hero } from "../components/startPage/Hero/Hero";
 // const features = [
 //     {
@@ -44,6 +45,7 @@ export const StartPage = () => {
             <Button type="primary"><Link to="/onboarding">start</Link></Button>
         </HeroUI> */}
         <Hero />
+        <Features />
         {/* <FeaturesUI>
             {features.map(el => <SingleFeatureUI key={el.text}>
                 {el.text}

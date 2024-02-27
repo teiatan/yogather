@@ -14,4 +14,5 @@ export const ButtonUI = styled.button`
     font-style: normal;
     font-weight: 600;
     line-height: normal;
+    cursor: pointer;
 `
