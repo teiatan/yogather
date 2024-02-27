@@ -2,9 +2,10 @@
 // import { AppleStoreBtnUI, ContactsUI, FeaturesUI, GooglePlayBtnUI, HeroUI, MainMotto, MainTitleUI, SingleFeatureUI, StoreBtnContainerUI } from "./StartPage.styled"
 // import featureImg from "../images/feauture.jpg";
 // import { Button } from "antd";
-// import { getUserAnswers, updateUserAnswers } from "../utils";
+import { getUserAnswers, updateUserAnswers } from "../utils";
 import { Features } from "../components/startPage/Features/Features";
 import { Hero } from "../components/startPage/Hero/Hero";
+import { Stores } from "../components/startPage/Stores/Stores";
 // const features = [
 //     {
 //         text: "effective yoga workout",
@@ -25,41 +26,21 @@ import { Hero } from "../components/startPage/Hero/Hero";
 // ]
 
 export const StartPage = () => {
-    // const increaseClicks = (place:string) => {
-    //     const prevAnswers = getUserAnswers()
-    //     const prevAmount = (prevAnswers && prevAnswers?.clicks && prevAnswers?.clicks[place]) ? prevAnswers?.clicks[place] : 0
-    //     const newAnswers = {
-    //         ...prevAnswers,
-    //         clicks: {
-    //             ...prevAnswers?.clicks,
-    //             [place]: prevAmount + 1
-    //         }
-    //     }
-    //     updateUserAnswers(newAnswers)   
-    // }
+    const increaseClicks = (place:string) => {
+        const prevAnswers = getUserAnswers()
+        const prevAmount = (prevAnswers && prevAnswers?.clicks && prevAnswers?.clicks[place]) ? prevAnswers?.clicks[place] : 0
+        const newAnswers = {
+            ...prevAnswers,
+            clicks: {
+                ...prevAnswers?.clicks,
+                [place]: prevAmount + 1
+            }
+        }
+        updateUserAnswers(newAnswers)   
+    }
     return (<>
-        {/* <HeroUI>
-            <MainTitleUI>Yogather</MainTitleUI>
-            <MainMotto>gather for yoga</MainMotto> 
-            wherever you are, whenever you want
-            <Button type="primary"><Link to="/onboarding">start</Link></Button>
-        </HeroUI> */}
         <Hero />
         <Features />
-        {/* <FeaturesUI>
-            {features.map(el => <SingleFeatureUI key={el.text}>
-                {el.text}
-                <img src={el.img} alt={el.text} width="210px"/>
-            </SingleFeatureUI>)}
-        </FeaturesUI>
-        <ContactsUI>
-            <MainMotto>Practice yoga together with yogather</MainMotto>
-            join now
-            <StoreBtnContainerUI>
-                <AppleStoreBtnUI onClick={()=>increaseClicks("appleStore")}/>
-                <GooglePlayBtnUI onClick={()=>increaseClicks("googlePlay")}/>
-            </StoreBtnContainerUI>
-            
-        </ContactsUI> */}
+        <Stores increaseClicks={increaseClicks}/>
     </>)
 }

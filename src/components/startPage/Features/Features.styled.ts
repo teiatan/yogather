@@ -95,6 +95,7 @@ export const FeaturesBottom = styled.div`
     display: flex;
     flex-direction: column;
     gap: 20px;
+    margin-bottom: 54px;
     @media screen and (min-width: 1200px) {
         flex-direction: row;
         justify-content: space-between;
