@@ -6,9 +6,17 @@ import { AnswerSubtext, AnswerTexUI, AnswerVariantUI, AnswersContainerUI, BackBt
 import { ButtonUI } from "../components/universal/Button.styled";
 
 export const OnboardingPage = () => {
+    const storedData = localStorage.getItem('onboardingAnswers');
+    const initialState = storedData ? JSON.parse(storedData) : {};
+
     const [currentQuestion, setCurrentQuestion] = useState(1);
-    const [onboardingAnswers, setOnboardingAnswers] = useState<Record<number, string[]>>({});
+    const [onboardingAnswers, setOnboardingAnswersState] = useState<Record<number, string[]>>(initialState);
     const question = questions?.find(el => el.orderNumber === currentQuestion);
+
+    const setOnboardingAnswers = (newItems: Record<number, string[]>) => {
+        setOnboardingAnswersState(newItems)
+        localStorage.setItem('onboardingAnswers', JSON.stringify(newItems))
+    }
     if(!onboardingAnswers[currentQuestion]) {
         const newAnswers = {
             ...onboardingAnswers,
@@ -88,7 +96,7 @@ export const OnboardingPage = () => {
 
                 </AnswersContainerUI>
                 <ButtonsContainerUI>
-                    {currentQuestion !==1 && <BackBtnUI onClick={()=>setCurrentQuestion(prev => prev-1)}><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    {currentQuestion !==1 && currentQuestion !==16 && <BackBtnUI onClick={()=>setCurrentQuestion(prev => prev-1)}><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g id="Frame">
                         <path id="Vector" d="M8.32843 10.997H20.5V12.997H8.32843L13.6924 18.3609L12.2782 19.7751L4.5 11.997L12.2782 4.21875L13.6924 5.63296L8.32843 10.997Z" fill="#1E2735"/>
                         </g>
