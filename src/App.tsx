@@ -12,16 +12,20 @@ const App = () => {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const direction = searchParams.get('direction') ?? "direct";
-  const [id, setId] = useState(()=>localStorage.getItem('id') ?? "")
+  const [id, setId] = useState(()=>localStorage.getItem('_id') ?? "")
 
   useEffect(()=>{
     if(!id) {
-      createUser({direction})
+      createUser({
+        direction
+      })
         .then((res:{data:User}) => {
-          const userId = res?.data?.id
+          console.log(res);
+          
+          const userId = res?.data?._id
           if(userId) {
             setId(userId);
-            localStorage.setItem('id', userId)
+            localStorage.setItem('_id', userId)
           }
         })
     }
