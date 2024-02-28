@@ -80,6 +80,7 @@ export const LinksUI = styled.div`
     display: flex;
     justify-content: space-between;
     gap: 24px;
+    visibility: hidden;
 
     & a {
         text-decoration: none;

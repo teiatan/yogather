@@ -4,6 +4,7 @@ import HeroImg from '../../../images/hero-big-phone.png';
 import HeroImgS1 from '../../../images/hero-small-1.png';
 import HeroImgS2 from '../../../images/hero-small-2.png';
 import { Button } from "../../universal/Button";
+import { Link } from "react-router-dom";
 
 export const Hero = () => {
     return(<SectionContainer>
@@ -13,7 +14,7 @@ export const Hero = () => {
                     Personalized <AccentText>yoga</AccentText> training and <OnlyDesktopUI>supportive</OnlyDesktopUI> community <AccentText>in phone</AccentText>
                 </MainHeading> 
                 Connect with like-minded individuals, share experiences, and stay motivated on your wellness journey—
-                <Button text="Get a program"/>
+                <Link to="/quiz"><Button text="Get a program"/></Link>
             </LeftPartContainerUI>
             <ImagesBlockUI>
                 <ImageUI src={HeroImg}/>
