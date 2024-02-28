@@ -16,9 +16,10 @@ const App = () => {
 
   const firstRender = useRef(true)
   useEffect(()=>{
-    if(firstRender.current) {
+    if(!firstRender.current) {
       return
     }
+    firstRender.current = false
     console.log(id);
     
     if(!id) {
