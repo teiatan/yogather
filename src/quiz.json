@@ -84,7 +84,7 @@
         "questionText": "What`s your experience with yoga?",
         "questionType": "range",
         "answers":[
-            {"id":"1", "text":"Beginner", "subText":"I`m brand new to yoga"},
+            {"id":"1", "text":"Beginner 1", "subText":"I`m brand new to yoga"},
             {"id":"2", "text":"Beginner 2", "subText":"I`ve done a few classes"},
             {"id":"3", "text":"Intermediate 1", "subText":"I'm comfortable with my yoga classes"},
             {"id":"4", "text":"Intermediate 2", "subText":"I can handle almost every pose"},

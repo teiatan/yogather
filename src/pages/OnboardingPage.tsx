@@ -2,7 +2,7 @@ import { useState } from "react";
 import questions from "../quiz.json";
 import { Header } from "../components/Header/Header";
 import { SectionContainer } from "../components/pageLayoutComponents/SectionContainer";
-import { AnswerTexUI, AnswerVariantUI, AnswersContainerUI, BackBtnUI, ButtonsContainerUI, InputUI, OboardingPageUI, QuizBlockUI } from "./OnboardingPage.styled";
+import { AnswerSubtext, AnswerTexUI, AnswerVariantUI, AnswersContainerUI, BackBtnUI, ButtonsContainerUI, InputUI, OboardingPageUI, QuizBlockUI } from "./OnboardingPage.styled";
 import { ButtonUI } from "../components/universal/Button.styled";
 
 export const OnboardingPage = () => {
@@ -67,12 +67,15 @@ export const OnboardingPage = () => {
                                 </svg>
 
                             }
-                            {el.text}
+                            <div style={{padding: "20px 0"}}>
+                                {el.text}
+                                {question?.questionType === "range" && 'subText' in el && <AnswerSubtext>{el?.subText}</AnswerSubtext>}
+                            </div>
                         </AnswerVariantUI>
                     )}
 
                     {question?.questionType === "input" && <InputUI 
-                    value={(onboardingAnswers && onboardingAnswers[currentQuestion] && onboardingAnswers[currentQuestion]) ? onboardingAnswers[currentQuestion][0] : ""} 
+                        value={(onboardingAnswers && onboardingAnswers[currentQuestion] && onboardingAnswers[currentQuestion]) ? onboardingAnswers[currentQuestion][0] : ""} 
                     type={question.inputType} 
                     placeholder="Type your answer"
                     onChange={(e)=>{

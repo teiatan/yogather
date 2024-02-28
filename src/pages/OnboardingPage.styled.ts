@@ -85,3 +85,13 @@ export const InputUI = styled.input`
         line-height: 145%;
     }
 `
+export const AnswerSubtext = styled.div`
+    color: #696F79;
+    text-align: center;
+    font-family: "DM Sans 24pt";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    margin-top: 4px;
+`
