@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { User, createUser } from "./api/users"
-import { Route, Routes } from "react-router-dom"
+import { Route, Routes, useLocation } from "react-router-dom"
 import { StartPage } from "./pages/StartPage"
 import { OnboardingPage } from "./pages/OnboardingPage"
 import { TrainingPage } from "./pages/TrainingPage"
@@ -9,11 +9,14 @@ import { GetEmailPage } from "./pages/GetEmailPage"
 
 const App = () => {
 
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const direction = searchParams.get('direction') ?? "direct";
   const [id, setId] = useState(()=>localStorage.getItem('id') ?? "")
 
   useEffect(()=>{
     if(!id) {
-      createUser({direction:"direct"})
+      createUser({direction})
         .then((res:{data:User}) => {
           const userId = res?.data?.id
           if(userId) {
