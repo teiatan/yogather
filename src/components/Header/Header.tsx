@@ -11,7 +11,7 @@ export const Header = ({bgColor = "white"}:{bgColor?:string}) => {
                     <Link to="">Features</Link>
                     <Link to="">Contacts</Link>
                 </LinksUI>
-                <Link to="/quiz" onClick={()=>increaseClicks("headerBtnGetYogather")}><ButtonUI>Get Yogather</ButtonUI></Link>
+                <Link to="/quiz" onClick={()=>increaseClicks("headerBtnGetYogather")} style={{visibility: "hidden"}}><ButtonUI>Get Yogather</ButtonUI></Link>
             </HeaderUI>
         </OutsideContainerUI>
     )
