@@ -4,6 +4,7 @@ import { Header } from "../components/Header/Header";
 import { SectionContainer } from "../components/pageLayoutComponents/SectionContainer";
 import { AnswerSubtext, AnswerTexUI, AnswerVariantUI, AnswersContainerUI, BackBtnUI, ButtonsContainerUI, InputUI, OboardingPageUI, QuizBlockUI } from "./OnboardingPage.styled";
 import { ButtonUI } from "../components/universal/Button.styled";
+import { useNavigate } from "react-router-dom";
 
 export const OnboardingPage = () => {
     const storedData = localStorage.getItem('onboardingAnswers');
@@ -30,6 +31,10 @@ export const OnboardingPage = () => {
         setOnboardingAnswers(newAnswers)
     }
 
+    const navigate = useNavigate();
+    if(currentQuestion === 16) {
+        navigate("/pay")
+    }
     
     return (<OboardingPageUI>
         <Header bgColor="#F8F8F8"/>
