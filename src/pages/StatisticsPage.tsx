@@ -41,10 +41,13 @@ export const StatisticsPage = () => {
                 total quiz finished: {mongoDBdata?.reduce((acc:any, el:any) => el?.answers?.onboardingAnswers && Object.keys(el?.answers?.onboardingAnswers)?.length === 16 ?  acc + 1 : acc, 0)} <br/>
                 app store click: {mongoDBdata?.reduce((acc:any, el:any) => el?.answers?.clicks?.appleStore ?  acc + el?.answers?.clicks.appleStore : acc, 0)} <br/>
                 google play clicks: {mongoDBdata?.reduce((acc:any, el:any) => el?.answers?.clicks?.googlePlay ?  acc + el?.answers?.clicks.googlePlay : acc, 0)}<br/>
-                subscriptions watched: {mongoDBdata?.reduce((acc:any, el:any) => el?.answers?.clicks?.["1monthSubscription"] || el?.answers?.clicks?.["1monthSubscription"] || el?.answers?.clicks?.["1monthSubscription"] ?  acc + 1 : acc, 0)}<br/>
-                1 month subscription: {mongoDBdata?.reduce((acc:any, el:any) => el?.answers?.clicks?.["1monthSubscription"] ?  acc + el?.answers?.clicks?.["1monthSubscription"] : acc, 0)}<br/>
-                3 month subscription: {mongoDBdata?.reduce((acc:any, el:any) => el?.answers?.clicks?.["3monthSubscription"] ?  acc + el?.answers?.clicks?.["3monthSubscription"] : acc, 0)}<br/>
-                12 month subscription: {mongoDBdata?.reduce((acc:any, el:any) => el?.answers?.clicks?.["3monthSubscription"] ?  acc + el?.answers?.clicks?.["12monthSubscription"] : acc, 0)}<br/>
+                users watched subscriptions: {mongoDBdata?.reduce((acc:any, el:any) => el?.answers?.clicks?.["1monthSubscription"] || el?.answers?.clicks?.["1monthSubscription"] || el?.answers?.clicks?.["1monthSubscription"] ?  acc + 1 : acc, 0)}<br/>
+                1 month subscription clicks: {mongoDBdata?.reduce((acc:any, el:any) => el?.answers?.clicks?.["1monthSubscription"] ?  acc + el?.answers?.clicks?.["1monthSubscription"] : acc, 0)}<br/>
+                3 month subscription clicks: {mongoDBdata?.reduce((acc:any, el:any) => el?.answers?.clicks?.["3monthSubscription"] ?  acc + el?.answers?.clicks?.["3monthSubscription"] : acc, 0)}<br/>
+                12 month subscription clicks: {mongoDBdata?.reduce((acc:any, el:any) => el?.answers?.clicks?.["3monthSubscription"] ?  acc + el?.answers?.clicks?.["12monthSubscription"] : acc, 0)}<br/>
+                users clicked 1 month subscription: {mongoDBdata?.reduce((acc:any, el:any) => el?.answers?.clicks?.["1monthSubscription"] ?  acc + 1 : acc, 0)}<br/>
+                users clicked 3 month subscription: {mongoDBdata?.reduce((acc:any, el:any) => el?.answers?.clicks?.["3monthSubscription"] ?  acc + 1 : acc, 0)}<br/>
+                users clicked 12 month subscription: {mongoDBdata?.reduce((acc:any, el:any) => el?.answers?.clicks?.["3monthSubscription"] ?  acc + 1 : acc, 0)}<br/>
                 
                 <>
                     {mongoDBdata?.map((el:any, idx:any) => <div key={idx} style={{border: "1px solid black", width: "100%"}}>
@@ -65,10 +68,13 @@ export const StatisticsPage = () => {
                 total quiz finished: {mockApi1Data?.reduce((acc:any, el:any) => el?.answers?.onboardingAnswers && Object.keys(el?.answers?.onboardingAnswers)?.length === 16 ?  acc + 1 : acc, 0)} <br/>
                 app store click: {mockApi1Data?.reduce((acc:any, el:any) => el?.answers?.clicks?.appleStore ?  acc + el?.answers?.clicks.appleStore : acc, 0)} <br/>
                 google play clicks: {mockApi1Data?.reduce((acc:any, el:any) => el?.answers?.clicks?.googlePlay ?  acc + el?.answers?.clicks.googlePlay : acc, 0)}<br/>
-                subscriptions watched: {mockApi1Data?.reduce((acc:any, el:any) => el?.answers?.clicks?.["1monthSubscription"] || el?.answers?.clicks?.["1monthSubscription"] || el?.answers?.clicks?.["1monthSubscription"] ?  acc + 1 : acc, 0)}<br/>
-                1 month subscription: {mockApi1Data?.reduce((acc:any, el:any) => el?.answers?.clicks?.["1monthSubscription"] ?  acc + el?.answers?.clicks?.["1monthSubscription"] : acc, 0)}<br/>
-                3 month subscription: {mockApi1Data?.reduce((acc:any, el:any) => el?.answers?.clicks?.["3monthSubscription"] ?  acc + el?.answers?.clicks?.["3monthSubscription"] : acc, 0)}<br/>
-                12 month subscription: {mockApi1Data?.reduce((acc:any, el:any) => el?.answers?.clicks?.["3monthSubscription"] ?  acc + el?.answers?.clicks?.["12monthSubscription"] : acc, 0)}<br/>
+                users watched subscriptions: {mockApi1Data?.reduce((acc:any, el:any) => el?.answers?.clicks?.["1monthSubscription"] || el?.answers?.clicks?.["1monthSubscription"] || el?.answers?.clicks?.["1monthSubscription"] ?  acc + 1 : acc, 0)}<br/>
+                1 month subscription clicks: {mockApi1Data?.reduce((acc:any, el:any) => el?.answers?.clicks?.["1monthSubscription"] ?  acc + el?.answers?.clicks?.["1monthSubscription"] : acc, 0)}<br/>
+                3 month subscription clicks: {mockApi1Data?.reduce((acc:any, el:any) => el?.answers?.clicks?.["3monthSubscription"] ?  acc + el?.answers?.clicks?.["3monthSubscription"] : acc, 0)}<br/>
+                12 month subscription clicks: {mockApi1Data?.reduce((acc:any, el:any) => el?.answers?.clicks?.["3monthSubscription"] ?  acc + el?.answers?.clicks?.["12monthSubscription"] : acc, 0)}<br/>
+                users clicked 1 month subscription: {mockApi1Data?.reduce((acc:any, el:any) => el?.answers?.clicks?.["1monthSubscription"] ?  acc + 1 : acc, 0)}<br/>
+                users clicked 3 month subscription: {mockApi1Data?.reduce((acc:any, el:any) => el?.answers?.clicks?.["3monthSubscription"] ?  acc + 1 : acc, 0)}<br/>
+                users clicked 12 month subscription: {mockApi1Data?.reduce((acc:any, el:any) => el?.answers?.clicks?.["3monthSubscription"] ?  acc + 1 : acc, 0)}<br/>
                 <>
                     {mockApi1Data?.map((el:any, idx:any) => <div key={idx} style={{border: "1px solid black", width: "100%"}}>
                         {idx} <br/>
@@ -88,10 +94,13 @@ export const StatisticsPage = () => {
                 total quiz finished: {mockApi2Data?.reduce((acc:any, el:any) => el?.answers?.onboardingAnswers && Object.keys(el?.answers?.onboardingAnswers)?.length === 16 ?  acc + 1 : acc, 0)} <br/>
                 app store click: {mockApi2Data?.reduce((acc:any, el:any) => el?.answers?.clicks?.appleStore ?  acc + el?.answers?.clicks.appleStore : acc, 0)} <br/>
                 google play clicks: {mockApi2Data?.reduce((acc:any, el:any) => el?.answers?.clicks?.googlePlay ?  acc + el?.answers?.clicks.googlePlay : acc, 0)}<br/>
-                subscriptions watched: {mockApi2Data?.reduce((acc:any, el:any) => el?.answers?.clicks?.["1monthSubscription"] || el?.answers?.clicks?.["1monthSubscription"] || el?.answers?.clicks?.["1monthSubscription"] ?  acc + 1 : acc, 0)}<br/>
-                1 month subscription: {mockApi2Data?.reduce((acc:any, el:any) => el?.answers?.clicks?.["1monthSubscription"] ?  acc + el?.answers?.clicks?.["1monthSubscription"] : acc, 0)}<br/>
-                3 month subscription: {mockApi2Data?.reduce((acc:any, el:any) => el?.answers?.clicks?.["3monthSubscription"] ?  acc + el?.answers?.clicks?.["3monthSubscription"] : acc, 0)}<br/>
-                12 month subscription: {mockApi2Data?.reduce((acc:any, el:any) => el?.answers?.clicks?.["3monthSubscription"] ?  acc + el?.answers?.clicks?.["12monthSubscription"] : acc, 0)}<br/>
+                users watched subscriptions: {mockApi2Data?.reduce((acc:any, el:any) => el?.answers?.clicks?.["1monthSubscription"] || el?.answers?.clicks?.["1monthSubscription"] || el?.answers?.clicks?.["1monthSubscription"] ?  acc + 1 : acc, 0)}<br/>
+                1 month subscription clicks: {mockApi2Data?.reduce((acc:any, el:any) => el?.answers?.clicks?.["1monthSubscription"] ?  acc + el?.answers?.clicks?.["1monthSubscription"] : acc, 0)}<br/>
+                3 month subscription clicks: {mockApi2Data?.reduce((acc:any, el:any) => el?.answers?.clicks?.["3monthSubscription"] ?  acc + el?.answers?.clicks?.["3monthSubscription"] : acc, 0)}<br/>
+                12 month subscription clicks: {mockApi2Data?.reduce((acc:any, el:any) => el?.answers?.clicks?.["3monthSubscription"] ?  acc + el?.answers?.clicks?.["12monthSubscription"] : acc, 0)}<br/>
+                users clicked 1 month subscription: {mockApi2Data?.reduce((acc:any, el:any) => el?.answers?.clicks?.["1monthSubscription"] ?  acc + 1 : acc, 0)}<br/>
+                users clicked 3 month subscription: {mockApi2Data?.reduce((acc:any, el:any) => el?.answers?.clicks?.["3monthSubscription"] ?  acc + 1 : acc, 0)}<br/>
+                users clicked 12 month subscription: {mockApi2Data?.reduce((acc:any, el:any) => el?.answers?.clicks?.["3monthSubscription"] ?  acc + 1 : acc, 0)}<br/>
                 
                 <>
                     {mockApi2Data?.map((el:any, idx:any) => <div key={idx} style={{border: "1px solid black", width: "100%"}}>
