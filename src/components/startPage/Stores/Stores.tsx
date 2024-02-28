@@ -9,8 +9,8 @@ export const Stores = ({increaseClicks}:{increaseClicks:(place:string)=>void}) =
             <MainHeading>Practice <AccentText>yoga </AccentText>together with <AccentText>yogather</AccentText></MainHeading>
             <HeadingUI>Join now</HeadingUI>
             <StoreBtnContainerUI>
-                <Link to="/pay"><AppleStoreBtnUI onClick={()=>increaseClicks("appleStore")}/></Link>
-                <Link to="/pay"><GooglePlayBtnUI onClick={()=>increaseClicks("googlePlay")}/></Link>
+                <Link to="/quiz"><AppleStoreBtnUI onClick={()=>increaseClicks("appleStore")}/></Link>
+                <Link to="/quiz"><GooglePlayBtnUI onClick={()=>increaseClicks("googlePlay")}/></Link>
             </StoreBtnContainerUI>
         </StoresContainerUI>
     </SectionContainer>)

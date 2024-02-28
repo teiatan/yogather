@@ -42,6 +42,7 @@ export const AnswerVariantUI = styled.div`
     background: #FEFEFE;
     display: flex;
     align-items: center;
+    cursor: pointer;
 `
 
 export const ButtonsContainerUI = styled.div`
