@@ -1,4 +1,4 @@
-import { updateUserData } from "./api/users";
+import { updateUserCopyData, updateUserData } from "./api/users";
 
 export interface Answers {
     clicks?: {
@@ -19,6 +19,8 @@ export const updateUserAnswers = (data: Answers) => {
     localStorage.setItem('answers', newData)
     const id = localStorage.getItem("_id");
     if(id) updateUserData(id, {answers: data})
+    const idCopy = localStorage.getItem("idCopy");
+    if(idCopy) updateUserCopyData(idCopy, {answers: data});
 }
 
 export const increaseClicks = (place:string) => {
