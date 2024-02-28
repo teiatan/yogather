@@ -11,11 +11,12 @@ export const OnboardingPage = () => {
     const initialState = storedData ? JSON.parse(storedData) : {};
 
     const answeredQuestions = Object.keys(initialState).map(el => Number(el));
-    const lastOpenedQuestion = Math.max(...answeredQuestions);
+    const lastOpenedQuestion = answeredQuestions.length > 0 ? Math.max(...answeredQuestions) : 1;
     const innitialCurrentAnswer = initialState && initialState[lastOpenedQuestion] && initialState[lastOpenedQuestion].length !== 0 ? lastOpenedQuestion+1 : lastOpenedQuestion
+    console.log(lastOpenedQuestion);
     
 
-    const [currentQuestion, setCurrentQuestion] = useState(innitialCurrentAnswer ?? 1);
+    const [currentQuestion, setCurrentQuestion] = useState(innitialCurrentAnswer);
     const [onboardingAnswers, setOnboardingAnswersState] = useState<Record<number, string[]>>(initialState);
     const question = questions?.find(el => el.orderNumber === currentQuestion);
 
@@ -33,7 +34,7 @@ export const OnboardingPage = () => {
 
     const navigate = useNavigate();
     if(currentQuestion === 16) {
-        navigate("/pay")
+        setTimeout(() => navigate("/pay"), 0)
     }
     
     return (<OboardingPageUI>
