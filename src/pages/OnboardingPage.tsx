@@ -9,7 +9,12 @@ export const OnboardingPage = () => {
     const storedData = localStorage.getItem('onboardingAnswers');
     const initialState = storedData ? JSON.parse(storedData) : {};
 
-    const [currentQuestion, setCurrentQuestion] = useState(1);
+    const answeredQuestions = Object.keys(initialState).map(el => Number(el));
+    const lastOpenedQuestion = Math.max(...answeredQuestions);
+    const innitialCurrentAnswer = initialState && initialState[lastOpenedQuestion] && initialState[lastOpenedQuestion].length !== 0 ? lastOpenedQuestion+1 : lastOpenedQuestion
+    
+
+    const [currentQuestion, setCurrentQuestion] = useState(innitialCurrentAnswer ?? 1);
     const [onboardingAnswers, setOnboardingAnswersState] = useState<Record<number, string[]>>(initialState);
     const question = questions?.find(el => el.orderNumber === currentQuestion);
 
