@@ -1,0 +1,182 @@
+[
+    {
+        "orderNumber": 1,
+        "id": 1,
+        "questionText": "Pick your main goals",
+        "questionType": "multiselection",
+        "answers":[
+            {"id":"1", "text":"Lose weight"},
+            {"id":"2", "text":"Sleep better"},
+            {"id":"3", "text":"Exercise more effectively"},
+            {"id":"4", "text":"Build healthy habits"},
+            {"id":"5", "text":"Tight and toned body"},
+            {"id":"6", "text":"More energy everyday"},
+            {"id":"7", "text":"other"}
+        ]
+    },
+    {
+        "orderNumber": 2,
+        "id": 2,
+        "questionText": "What motivates you the most",
+        "questionType": "multiselection",
+        "answers":[
+            {"id":"1", "text":"Lose weight"},
+            {"id":"2", "text":"Improve flexibility"},
+            {"id":"3", "text":"Health & Recovery"},
+            {"id":"4", "text":"Relieve stress"},
+            {"id":"5", "text":"other"}
+        ]
+    },
+    {
+        "orderNumber": 3,
+        "id": 3,
+        "questionText": "Choose type of practice",
+        "questionType": "multiselection",
+        "answers":[
+            {"id":"1", "text":"Hatha"},
+            {"id":"2", "text":"Kundalina"},
+            {"id":"3", "text":"Vinyasa"},
+            {"id":"4", "text":"Ashtanga"},
+            {"id":"5", "text":"any"}
+        ]
+    },
+    {
+        "orderNumber": 4,
+        "id": 4,
+        "questionText": "Choose additional practice type (optional)",
+        "questionType": "multiselection",
+        "optional": true,
+        "answers":[
+            {"id":"1", "text":"Pilates"},
+            {"id":"2", "text":"Sretching"},
+            {"id":"3", "text":"Aerobic"},
+            {"id":"4", "text":"HIIT"},
+            {"id":"5", "text":"Functional training"}
+        ]
+    },
+    {
+        "orderNumber": 5,
+        "id": 5,
+        "questionText": "Choose a body part to focus on",
+        "questionType": "multiselection",
+        "answers":[
+            {"id":"1", "text":"Arms&shouldares"},
+            {"id":"2", "text":"Chest"},
+            {"id":"3", "text":"Belly"},
+            {"id":"4", "text":"Butt"},
+            {"id":"5", "text":"Legs"}
+        ]
+    },
+    {
+        "orderNumber": 6,
+        "id": 6,
+        "questionText": "What's your fitness level?",
+        "questionType": "range",
+        "answers":[
+            {"id":"1", "text":"Begginer", "subText":"Doesn’t train any where"},
+            {"id":"2", "text":"Intermediate", "subText":"Training for a few years"},
+            {"id":"3", "text":"Advanced", "subText":"5 years at trainings"}
+        ]
+    },
+    {
+        "orderNumber": 7,
+        "id": 7,
+        "questionText": "What`s your experience with yoga?",
+        "questionType": "range",
+        "answers":[
+            {"id":"1", "text":"Beginner", "subText":"I`m brand new to yoga"},
+            {"id":"2", "text":"Beginner 2", "subText":"I`ve done a few classes"},
+            {"id":"3", "text":"Intermediate 1", "subText":"I'm comfortable with my yoga classes"},
+            {"id":"4", "text":"Intermediate 2", "subText":"I can handle almost every pose"},
+            {"id":"5", "text":"Advanced", "subText":"Give me the hardest poses you've got"}
+        ]
+    },
+    {
+        "orderNumber": 8,
+        "id": 8,
+        "questionText": "What's your gender",
+        "questionType": "oneSelection",
+        "answers":[
+            {"id":"1", "text":"female"},
+            {"id":"2", "text":"male"},
+            {"id":"3", "text":"non-binary"}
+        ]
+    },
+    {
+        "orderNumber": 9,
+        "id": 9,
+        "questionText": "Which age group do you belong to?",
+        "questionType": "oneSelection",
+        "answers":[
+            {"id":"1", "text":"<20"},
+            {"id":"2", "text":"20-30"},
+            {"id":"3", "text":"31-40"},
+            {"id":"4", "text":"41-50"},
+            {"id":"5", "text":"51-60"},
+            {"id":"6", "text":"60"}
+        ]
+    },
+    {
+        "orderNumber": 10,
+        "id": 10,
+        "questionText": "How many squats can you do at once?",
+        "questionType": "input",
+        "inputType": "number"
+    },
+    {
+        "orderNumber": 11,
+        "id": 11,
+        "questionText": "How far can you do forward bends?",
+        "questionType": "oneSelection",
+        "answers":[
+            {"id":"1", "text":"Not very far"},
+            {"id":"2", "text":"About to touch the feet"},
+            {"id":"3", "text":"Able to touch the feet easily"}
+        ]
+    },
+    {
+        "orderNumber": 12,
+        "id": 12,
+        "questionText": "Any injuries in these ares?",
+        "questionType": "multiselection",
+        "optional": true,
+        "answers":[
+            {"id":"1", "text":"Spine"},
+            {"id":"2", "text":"Wrist"},
+            {"id":"3", "text":"Knee"},
+            {"id":"4", "text":"Ankle"}
+        ]
+    },
+    {
+        "orderNumber": 13,
+        "id": 13,
+        "questionText": "How often would you like to practice?",
+        "questionType": "oneSelection",
+        "answers":[
+            {"id":"1", "text":"Once per week"},
+            {"id":"2", "text":"Twice per week"},
+            {"id":"3", "text":"Three times per week"},
+            {"id":"4", "text":"More than three times per week"}
+        ]
+    },
+    {
+        "orderNumber": 14,
+        "id": 14,
+        "questionText": "What is your preferable practice duration?",
+        "questionType": "",
+        "answers":[
+            {"id":"1", "text":"10 - 15 min"},
+            {"id":"2", "text":"15 - 30 min"},
+            {"id":"3", "text":"30 - 45 min"},
+            {"id":"4", "text":"45 - 60 min"},
+            {"id":"5", "text":"> 60 min"}
+        ]
+    },
+    {
+        "orderNumber": 15,
+        "id": 15,
+        "questionText": "Please enter your email",
+        "questionType": "input",
+        "inputType": "email"
+    }
+]
