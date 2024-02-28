@@ -5,6 +5,7 @@ import { StartPage } from "./pages/StartPage"
 import { OnboardingPage } from "./pages/OnboardingPage"
 import { TrainingPage } from "./pages/TrainingPage"
 import { SubscriptionPage } from "./pages/SubscriptionPage"
+import { GetEmailPage } from "./pages/GetEmailPage"
 
 const App = () => {
 
@@ -29,6 +30,7 @@ const App = () => {
       <Route path="/quiz" element={<OnboardingPage />} />
       <Route path="/training" element={<TrainingPage />} />
       <Route path="/pay" element={<SubscriptionPage />} />
+      <Route path="/email" element={<GetEmailPage />} />
       <Route path='*' element={<StartPage />} />
     </Routes>
   )

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { ButtonUI as HeaderButton } from "../components/Header/Header.styled"
 import { ButtonUI } from "../components/universal/Button.styled"
 import { AccentTextUI, DescriptionTextUI, InsideContainerUI, Logo, MonthAmount, NotSmallestUI, OldPriceUI, OnePlanUI, OnlyDesktopUI, PerDayText, PlansContainerUI, PricePerDay, PricePerPeriodUI, SubscriptionContainerUI } from "./SubscriptionPage.styled"
@@ -17,6 +17,8 @@ export const SubscriptionPage = () => {
         }
         updateUserAnswers(newAnswers)   
     }
+
+    const navigate = useNavigate();
     return (<SubscriptionContainerUI>
         <InsideContainerUI>
             <Link to="/"><Logo /></Link>
@@ -24,7 +26,7 @@ export const SubscriptionPage = () => {
             <DescriptionTextUI>Get <AccentTextUI>unlimited</AccentTextUI> access for <AccentTextUI>personalized</AccentTextUI> trainings</DescriptionTextUI>
 
             <PlansContainerUI>
-                <OnePlanUI onClick={()=>increaseClicks("1monthSubscription")}>
+                <OnePlanUI onClick={()=>{increaseClicks("1monthSubscription");navigate("/email")}}>
                     <MonthAmount>1</MonthAmount>
                     month plan 
                     <PricePerPeriodUI>$24.99</PricePerPeriodUI> 
@@ -34,7 +36,7 @@ export const SubscriptionPage = () => {
                     <NotSmallestUI><ButtonUI>Get <OnlyDesktopUI>plan</OnlyDesktopUI></ButtonUI></NotSmallestUI>
                 </OnePlanUI>
 
-                <OnePlanUI onClick={()=>increaseClicks("3monthSubscription")}>
+                <OnePlanUI onClick={()=>{increaseClicks("3monthSubscription");navigate("/email")}}>
                     <MonthAmount>3</MonthAmount>
                     month plan
                     <PricePerPeriodUI>$44.99</PricePerPeriodUI>
@@ -44,7 +46,7 @@ export const SubscriptionPage = () => {
                     <NotSmallestUI><HeaderButton>Get <OnlyDesktopUI>plan</OnlyDesktopUI></HeaderButton></NotSmallestUI>
                 </OnePlanUI>
 
-                <OnePlanUI onClick={()=>increaseClicks("12monthSubscription")}>
+                <OnePlanUI onClick={()=>{increaseClicks("12monthSubscription");navigate("/email")}}>
                     <MonthAmount>12</MonthAmount>
                     month plan
                     <PricePerPeriodUI>$84.99</PricePerPeriodUI>

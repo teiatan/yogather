@@ -44,6 +44,7 @@ export const OnePlanUI = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
 
     &:nth-child(2) {
         background-color: #e20c8c;

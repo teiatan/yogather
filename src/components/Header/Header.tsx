@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import { ButtonUI, HeaderUI, LinksUI, Logo, OutsideContainerUI } from "./Header.styled"
+import { increaseClicks } from "../../utils"
 
 export const Header = ({bgColor = "white"}:{bgColor?:string}) => {
     return (
@@ -10,7 +11,7 @@ export const Header = ({bgColor = "white"}:{bgColor?:string}) => {
                     <Link to="">Features</Link>
                     <Link to="">Contacts</Link>
                 </LinksUI>
-                <Link to="/pay"><ButtonUI>Get Yogather</ButtonUI></Link>
+                <Link to="/pay" onClick={()=>increaseClicks("headerBtnGetYogather")}><ButtonUI>Get Yogather</ButtonUI></Link>
             </HeaderUI>
         </OutsideContainerUI>
     )
