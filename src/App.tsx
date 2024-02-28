@@ -20,8 +20,7 @@ const App = () => {
       firstRender.current = false
       return
     }
-    console.log(id);
-    
+  
     if(!id) {
       createUser({
         direction
