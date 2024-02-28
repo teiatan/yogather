@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from "react";
 import questions from "../quiz.json";
 import { Header } from "../components/Header/Header";
@@ -8,16 +9,25 @@ import { useNavigate } from "react-router-dom";
 import { getUserAnswers, updateUserAnswers } from "../utils";
 
 export const OnboardingPage = () => {
+
     const storedData = localStorage.getItem('onboardingAnswers');
     const initialState = storedData ? JSON.parse(storedData) : {};
 
     const answeredQuestions = Object.keys(initialState).map(el => Number(el));
     const lastOpenedQuestion = answeredQuestions.length > 0 ? Math.max(...answeredQuestions) : 1;
-    const innitialCurrentAnswer = initialState && initialState[lastOpenedQuestion] && initialState[lastOpenedQuestion].length !== 0 ? lastOpenedQuestion+1 : lastOpenedQuestion
+
+    const innitialCurrentAnswer = initialState && initialState[lastOpenedQuestion] && initialState[lastOpenedQuestion].length !== 0 && initialState[lastOpenedQuestion][0] !== "" ? lastOpenedQuestion+1 : lastOpenedQuestion;
 
     const [currentQuestion, setCurrentQuestion] = useState(innitialCurrentAnswer);
+    const question:any = questions?.find(el => el.orderNumber === currentQuestion);
+    const emptyInput = question?.questionType === "input" && initialState && initialState[lastOpenedQuestion] && initialState[lastOpenedQuestion][0] === "";
+    const alwaysNextActive = question?.optional;
+    const isEmpty = (initialState && initialState[currentQuestion] && initialState[currentQuestion].length === 0);
+    const activeNext = alwaysNextActive || !(isEmpty || emptyInput); 
+    
+
     const [onboardingAnswers, setOnboardingAnswersState] = useState<Record<number, string[]>>(initialState);
-    const question = questions?.find(el => el.orderNumber === currentQuestion);
+
 
     const setOnboardingAnswers = (newItems: Record<number, string[]>) => {
         setOnboardingAnswersState(newItems)
@@ -45,7 +55,7 @@ export const OnboardingPage = () => {
                 <AnswerTexUI>{question?.questionText}</AnswerTexUI>
                 <AnswersContainerUI>
 
-                    {question?.questionType === "multiselection" && question?.answers?.map(el =>
+                    {question?.questionType === "multiselection" && question?.answers?.map((el:any) =>
                         <AnswerVariantUI key={el.id} onClick={()=>{
                             const newAnswers = {
                                 ...onboardingAnswers,
@@ -67,7 +77,7 @@ export const OnboardingPage = () => {
                         </AnswerVariantUI>
                     )}
 
-                    {(question?.questionType === "range" || question?.questionType === "oneSelection") && question?.answers?.map(el =>
+                    {(question?.questionType === "range" || question?.questionType === "oneSelection") && question?.answers?.map((el:any) =>
                         <AnswerVariantUI key={el.id} onClick={()=>{
                             const newAnswers = {
                                 ...onboardingAnswers,
@@ -113,7 +123,7 @@ export const OnboardingPage = () => {
                         <path id="Vector" d="M8.32843 10.997H20.5V12.997H8.32843L13.6924 18.3609L12.2782 19.7751L4.5 11.997L12.2782 4.21875L13.6924 5.63296L8.32843 10.997Z" fill="#1E2735"/>
                         </g>
                     </svg>Back</BackBtnUI>}
-                    {currentQuestion !==16 && <ButtonUI onClick={()=>setCurrentQuestion(prev => prev+1)}>Next question</ButtonUI>}
+                    {currentQuestion !==16 && <ButtonUI disabled={!activeNext} onClick={()=>setCurrentQuestion(prev => prev+1)}>Next question</ButtonUI>}
                 </ButtonsContainerUI>
             </QuizBlockUI>
         </SectionContainer>

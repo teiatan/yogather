@@ -2,6 +2,13 @@
     {
         "orderNumber": 1,
         "id": 1,
+        "questionText": "Please enter your email",
+        "questionType": "input",
+        "inputType": "email"
+    },
+    {
+        "orderNumber": 2,
+        "id": 2,
         "questionText": "Pick your main goals",
         "questionType": "multiselection",
         "answers":[
@@ -15,8 +22,8 @@
         ]
     },
     {
-        "orderNumber": 2,
-        "id": 2,
+        "orderNumber": 3,
+        "id": 3,
         "questionText": "What motivates you the most",
         "questionType": "multiselection",
         "answers":[
@@ -28,8 +35,8 @@
         ]
     },
     {
-        "orderNumber": 3,
-        "id": 3,
+        "orderNumber": 4,
+        "id": 4,
         "questionText": "Choose type of practice",
         "questionType": "multiselection",
         "answers":[
@@ -41,8 +48,8 @@
         ]
     },
     {
-        "orderNumber": 4,
-        "id": 4,
+        "orderNumber": 5,
+        "id": 5,
         "questionText": "Choose additional practice type (optional)",
         "questionType": "multiselection",
         "optional": true,
@@ -55,8 +62,8 @@
         ]
     },
     {
-        "orderNumber": 5,
-        "id": 5,
+        "orderNumber": 6,
+        "id": 6,
         "questionText": "Choose a body part to focus on",
         "questionType": "multiselection",
         "answers":[
@@ -68,8 +75,8 @@
         ]
     },
     {
-        "orderNumber": 6,
-        "id": 6,
+        "orderNumber": 7,
+        "id": 7,
         "questionText": "What's your fitness level?",
         "questionType": "range",
         "answers":[
@@ -79,8 +86,8 @@
         ]
     },
     {
-        "orderNumber": 7,
-        "id": 7,
+        "orderNumber": 8,
+        "id": 8,
         "questionText": "What`s your experience with yoga?",
         "questionType": "range",
         "answers":[
@@ -92,8 +99,8 @@
         ]
     },
     {
-        "orderNumber": 8,
-        "id": 8,
+        "orderNumber": 9,
+        "id": 9,
         "questionText": "What's your gender",
         "questionType": "oneSelection",
         "answers":[
@@ -103,8 +110,8 @@
         ]
     },
     {
-        "orderNumber": 9,
-        "id": 9,
+        "orderNumber": 10,
+        "id": 10,
         "questionText": "Which age group do you belong to?",
         "questionType": "oneSelection",
         "answers":[
@@ -117,15 +124,15 @@
         ]
     },
     {
-        "orderNumber": 10,
-        "id": 10,
+        "orderNumber": 11,
+        "id": 11,
         "questionText": "How many squats can you do at once?",
         "questionType": "input",
         "inputType": "number"
     },
     {
-        "orderNumber": 11,
-        "id": 11,
+        "orderNumber": 12,
+        "id": 12,
         "questionText": "How far can you do forward bends?",
         "questionType": "oneSelection",
         "answers":[
@@ -135,8 +142,8 @@
         ]
     },
     {
-        "orderNumber": 12,
-        "id": 12,
+        "orderNumber": 13,
+        "id": 13,
         "questionText": "Any injuries in these ares?",
         "questionType": "multiselection",
         "optional": true,
@@ -148,8 +155,8 @@
         ]
     },
     {
-        "orderNumber": 13,
-        "id": 13,
+        "orderNumber": 14,
+        "id": 14,
         "questionText": "How often would you like to practice?",
         "questionType": "oneSelection",
         "answers":[
@@ -160,8 +167,8 @@
         ]
     },
     {
-        "orderNumber": 14,
-        "id": 14,
+        "orderNumber": 15,
+        "id": 15,
         "questionText": "What is your preferable practice duration?",
         "questionType": "oneSelection",
         "answers":[
@@ -171,13 +178,6 @@
             {"id":"4", "text":"45 - 60 min"},
             {"id":"5", "text":"> 60 min"}
         ]
-    },
-    {
-        "orderNumber": 15,
-        "id": 15,
-        "questionText": "Please enter your email",
-        "questionType": "input",
-        "inputType": "email"
     },
     {
         "orderNumber": 16,

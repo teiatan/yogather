@@ -15,4 +15,10 @@ export const ButtonUI = styled.button`
     font-weight: 600;
     line-height: normal;
     cursor: pointer;
+
+    &:disabled {
+        background-color: transparent;
+        border: 1px solid #CF1A86;
+        color: black;
+    }
 `
