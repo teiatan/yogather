@@ -5,6 +5,7 @@ import { SectionContainer } from "../components/pageLayoutComponents/SectionCont
 import { AnswerSubtext, AnswerTexUI, AnswerVariantUI, AnswersContainerUI, BackBtnUI, ButtonsContainerUI, InputUI, OboardingPageUI, QuizBlockUI } from "./OnboardingPage.styled";
 import { ButtonUI } from "../components/universal/Button.styled";
 import { useNavigate } from "react-router-dom";
+import { getUserAnswers, updateUserAnswers } from "../utils";
 
 export const OnboardingPage = () => {
     const storedData = localStorage.getItem('onboardingAnswers');
@@ -13,8 +14,6 @@ export const OnboardingPage = () => {
     const answeredQuestions = Object.keys(initialState).map(el => Number(el));
     const lastOpenedQuestion = answeredQuestions.length > 0 ? Math.max(...answeredQuestions) : 1;
     const innitialCurrentAnswer = initialState && initialState[lastOpenedQuestion] && initialState[lastOpenedQuestion].length !== 0 ? lastOpenedQuestion+1 : lastOpenedQuestion
-    console.log(lastOpenedQuestion);
-    
 
     const [currentQuestion, setCurrentQuestion] = useState(innitialCurrentAnswer);
     const [onboardingAnswers, setOnboardingAnswersState] = useState<Record<number, string[]>>(initialState);
@@ -23,6 +22,8 @@ export const OnboardingPage = () => {
     const setOnboardingAnswers = (newItems: Record<number, string[]>) => {
         setOnboardingAnswersState(newItems)
         localStorage.setItem('onboardingAnswers', JSON.stringify(newItems))
+        const answers = getUserAnswers();
+        updateUserAnswers({...answers, onboardingAnswers: newItems})
     }
     if(!onboardingAnswers[currentQuestion]) {
         const newAnswers = {
