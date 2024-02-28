@@ -69,3 +69,19 @@ export const BackBtnUI = styled.div`
     line-height: normal;
     cursor: pointer;
 `
+
+export const InputUI = styled.input`
+    border-radius: 8px;
+    border: 1px solid #E6E7E9;
+    background: #FEFEFE;
+    padding: 16px;
+
+    &::placeholder {
+        color: #696F79;
+        font-family: "DM Sans 24pt";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 145%;
+    }
+`

@@ -163,7 +163,7 @@
         "orderNumber": 14,
         "id": 14,
         "questionText": "What is your preferable practice duration?",
-        "questionType": "",
+        "questionType": "oneSelection",
         "answers":[
             {"id":"1", "text":"10 - 15 min"},
             {"id":"2", "text":"15 - 30 min"},
@@ -178,5 +178,11 @@
         "questionText": "Please enter your email",
         "questionType": "input",
         "inputType": "email"
+    },
+    {
+        "orderNumber": 16,
+        "id": 16,
+        "questionText": "Thanks for your answers",
+        "questionType": ""
     }
 ]
