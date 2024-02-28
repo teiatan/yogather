@@ -20,7 +20,6 @@ const App = () => {
       return
     }
     firstRender.current = false
-    console.log(id);
     
     if(!id) {
       createUser({

@@ -17,7 +17,7 @@ export const getUserAnswers = () => {
 export const updateUserAnswers = (data: Answers) => {
     const newData = JSON.stringify(data)
     localStorage.setItem('answers', newData)
-    const id = localStorage.getItem("id");
+    const id = localStorage.getItem("_id");
     if(id) updateUserData(id, {answers: data})
 }
 
