@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { User, createUser } from "./api/users"
 import { Route, Routes, useLocation } from "react-router-dom"
 import { StartPage } from "./pages/StartPage"
@@ -14,14 +14,19 @@ const App = () => {
   const direction = searchParams.get('direction') ?? "direct";
   const [id, setId] = useState(()=>localStorage.getItem('_id') ?? "")
 
+  const firstRender = useRef(true)
   useEffect(()=>{
+    if(firstRender.current) {
+      firstRender.current = false
+      return
+    }
+    console.log(id);
+    
     if(!id) {
       createUser({
         direction
       })
         .then((res:{data:User}) => {
-          console.log(res);
-          
           const userId = res?.data?._id
           if(userId) {
             setId(userId);
@@ -29,7 +34,7 @@ const App = () => {
           }
         })
     }
-  }, [id])
+  }, [])
 
   return (
     <Routes>
