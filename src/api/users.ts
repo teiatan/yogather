@@ -5,7 +5,7 @@ import { Answers } from "../utils";
 // const baseUrl = "https://yogather-backend.vercel.app/";
 const baseUrl = "https://yogather-backend.onrender.com/";
 const mockapiUrl = "https://65df9647ff5e305f32a29a13.mockapi.io/users"; // url for first 100 users
-// const mockapiUrl = "https://65df9647ff5e305f32a29a13.mockapi.io/users"; // url for next 100 users
+// const mockapiUrl = "https://65dfb021ff5e305f32a2fc74.mockapi.io/users"; // url for next 100 users
 const mockapiTestUrl = "https://64a0823fed3c41bdd7a75666.mockapi.io/users";
 
 export interface User {
@@ -51,5 +51,5 @@ export const getMockapi1Data = ():Promise<{data:User}> => {
 }
 
 export const getMockapi2Data = ():Promise<{data:User}> => {
-    return axios.get("https://65df9647ff5e305f32a29a13.mockapi.io/users")
+    return axios.get("https://65dfb021ff5e305f32a2fc74.mockapi.io/users")
 }
