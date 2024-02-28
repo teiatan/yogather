@@ -6,6 +6,7 @@ import { OnboardingPage } from "./pages/OnboardingPage"
 import { TrainingPage } from "./pages/TrainingPage"
 import { SubscriptionPage } from "./pages/SubscriptionPage"
 import { GetEmailPage } from "./pages/GetEmailPage"
+import { StatisticsPage } from "./pages/StatisticsPage"
 
 const App = () => {
 
@@ -42,6 +43,7 @@ const App = () => {
       <Route path="/training" element={<TrainingPage />} />
       <Route path="/pay" element={<SubscriptionPage />} />
       <Route path="/email" element={<GetEmailPage />} />
+      <Route path="/statistics" element={<StatisticsPage />} />
       <Route path='*' element={<StartPage />} />
     </Routes>
   )

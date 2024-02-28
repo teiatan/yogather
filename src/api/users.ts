@@ -20,3 +20,7 @@ export const createUser = (data:User):Promise<{data:User}> => {
 export const updateUserData = (id:string|number, data:User) => {
     axios.put(`${baseUrl}${id}`, data)
 }
+
+export const getData = ():Promise<{data:User}> => {
+    return axios.get(baseUrl)
+}
