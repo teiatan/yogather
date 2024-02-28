@@ -14,13 +14,13 @@ const App = () => {
   const direction = searchParams.get('direction') ?? "direct";
   const [id, setId] = useState(()=>localStorage.getItem('_id') ?? "")
 
-  const firstRender = useRef(true)
+  // const firstRender = useRef(true)
   useEffect(()=>{
-    if(firstRender.current) {
-      firstRender.current = false
-      return
-    }
-  
+    // if(firstRender.current) {
+    //   return
+    // }
+    console.log(id);
+    
     if(!id) {
       createUser({
         direction
