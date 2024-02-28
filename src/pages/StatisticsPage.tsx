@@ -1,27 +1,54 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-// import { useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import { SectionContainer } from "../components/pageLayoutComponents/SectionContainer"
-// import { getData } from "../api/users"
+import { getData, getMockapi1Data, getMockapi2Data } from "../api/users"
+import { HeadingUI } from "../components/startPage/Features/Features.styled";
 
 export const StatisticsPage = () => {
     
-    // const [data, setData] = useState<any>("")
+    const [mongoDBdata, setMongoDBdata] = useState<any>([]);
+    const [mockApi1Data, setMockApi1Data] = useState<any>([]);
+    const [mockApi2Data, setMockApi2Data] = useState<any>([])
 
-    // useEffect(()=>{
-    //     getData().then(res => {
-    //         console.log(res); 
-    //         setData(res)
-    //     }
-    //     )
-    // },[])
+    useEffect(()=>{
+        getData().then(res => {
+            setMongoDBdata(res?.data)
+        }
+        )
+    },[])
 
+    useEffect(()=>{
+        getMockapi1Data().then(res => {
+            setMockApi1Data(res?.data)
+        }
+        )
+    },[])
+
+    useEffect(()=>{
+        getMockapi2Data().then(res => {
+            setMockApi2Data(res?.data)
+        }
+        )
+    },[])
+
+    console.log(mockApi1Data);
     
     return (
-        <SectionContainer>
-            {/* total:{data?.data?.length}
-            {data?.data?.map((el:any) => <div style={{border: "1px solid #000", }}>
-                {JSON.stringify(el)}
-            </div>)} */}
-        </SectionContainer>
+        <>
+            <SectionContainer bgColor="#F8F8F8">
+                <HeadingUI>MongoDB data</HeadingUI>
+                total users: {mongoDBdata?.length}
+            </SectionContainer>
+
+            <SectionContainer bgColor="white">
+                <HeadingUI>mockapi (first 100) data</HeadingUI>
+                total users: {mockApi1Data?.length}
+            </SectionContainer>
+
+            <SectionContainer bgColor="#F8F8F8">
+                <HeadingUI>mockapi (second 100) data</HeadingUI>
+                total users: {mockApi2Data?.length}
+            </SectionContainer>
+        </>
     )
 }

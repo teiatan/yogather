@@ -49,3 +49,7 @@ export const getMockapiTestData = ():Promise<{data:User}> => {
 export const getMockapi1Data = ():Promise<{data:User}> => {
     return axios.get("https://65df9647ff5e305f32a29a13.mockapi.io/users")
 }
+
+export const getMockapi2Data = ():Promise<{data:User}> => {
+    return axios.get("https://65df9647ff5e305f32a29a13.mockapi.io/users")
+}

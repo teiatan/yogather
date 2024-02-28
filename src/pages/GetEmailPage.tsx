@@ -10,7 +10,7 @@ const questions = [{
     "orderNumber": 16,
     "id": 16,
     "questionText": "Thank you for expressing interest in our product! We're thrilled that you're eager to be among the first to experience it. <span style={{color: '#CF1A86'}}>Leave your email</span>, and we'll ensure you receive the earliest notifications once it becomes available.",
-    "questionType": "input",
+    "questionType": "",
     "inputType": "email"
 }]
 
@@ -42,7 +42,8 @@ export const GetEmailPage = () => {
         <Header bgColor="#F8F8F8"/>
         <SectionContainer bgColor="#F8F8F8">
             <QuizBlockUI>
-                <AnswerTexUI>Thank you for expressing interest in our product! We're thrilled that you're eager to be among the first to experience it. <span style={{color: '#CF1A86'}}>Leave your email</span>, and we'll ensure you receive the earliest notifications once it becomes available.</AnswerTexUI>
+                <AnswerTexUI>Thank you for expressing interest in our product! We're thrilled that you're eager to be among the first to experience it.<br/>We'll ensure you receive the earliest notifications once <span style={{color: '#CF1A86'}}>Yogather</span> becomes available.</AnswerTexUI>
+                {/* <AnswerTexUI>Thank you for expressing interest in our product! We're thrilled that you're eager to be among the first to experience it. <span style={{color: '#CF1A86'}}>Leave your email</span>, and we'll ensure you receive the earliest notifications once it becomes available.</AnswerTexUI> */}
                 <AnswersContainerUI>
 
                     {question?.questionType === "input" && <InputUI 
@@ -64,7 +65,7 @@ export const GetEmailPage = () => {
                         <path id="Vector" d="M8.32843 10.997H20.5V12.997H8.32843L13.6924 18.3609L12.2782 19.7751L4.5 11.997L12.2782 4.21875L13.6924 5.63296L8.32843 10.997Z" fill="#1E2735"/>
                         </g>
                     </svg>Back</BackBtnUI></Link>
-                    <ButtonUI onClick={()=>{setCurrentQuestion(prev => prev+1); navigate("/")}}>Submit</ButtonUI>
+                    <ButtonUI onClick={()=>{setCurrentQuestion(prev => prev+1); navigate("/")}}>to main</ButtonUI>
                 </ButtonsContainerUI>
             </QuizBlockUI>
         </SectionContainer>
